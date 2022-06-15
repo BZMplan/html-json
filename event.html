@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- onload()事件 -->
+<!-- FunctionOnLoad()可以替换为javascript代码 -->
+<body onload="FunctionOnLoad()">
+   <h onmouseover="FunctionOver()" onmouseout="FunctionOut()" id = "demo1">Hello</h>
+   <h id = "demo3"></h>
+    <script>
+        function FunctionOver(){
+            document.getElementById("demo1").innerHTML="World";
+        };
+        function FunctionOut(){
+            document.getElementById("demo1").innerHTML="Hello";
+        };
+        //onload()事件
+        function FunctionOnLoad(){
+            window.alert("页面已经加载完毕");
+        }
+        //监听键盘
+        document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            document.getElementById("demo3").innerHTML=e.code;
+            console.log(e.code)
+            //some things that you want to do .
+        };
+        </script>  
+</body>
+</html>
